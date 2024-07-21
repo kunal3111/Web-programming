@@ -176,6 +176,8 @@ function pokeDelete(ev) {
     catchBtn.setAttribute("data-id", DataId);
     catchBtn.innerHTML = "Catch";
     catchbtn1.replaceWith(catchBtn);
+    $pokemon_dialog.close();
+
 
     saveData();
     pokeDelete.close();
