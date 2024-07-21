@@ -1,0 +1,48 @@
+.title{
+    display: flex;
+    justify-content: center;
+    border-width: 5px 0 ;
+    border-style: dashed;
+    border-color: black;
+    background-color: rgba(240, 244, 247, 0.482);
+    padding: 10px;
+    text-shadow: 1px 1px 3px rgb(168, 8, 236);
+    color: black;
+}
+.emoji-gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.emoji-item{
+    border: 1px solid black;
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(251, 247, 242);
+   border-radius: 10px;
+
+}
+.char{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+
+}
+.nameofEmoji{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+background-color: rgba(211, 211, 211, 0.406);
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
