@@ -1,0 +1,39 @@
+:root{
+    --primary:rgb(6, 22, 28);
+    --secondary:rgba(255 255 255 / 76%);
+    --gloss:#006480;
+}
+*{
+margin: 0;
+padding: 0;
+}
+body{
+ 
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+.lrsections{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    background-color:var(--primary);
+    color: var(--secondary);
+    height: 100vh;
+    width: 45%;
+    position: fixed;
+    left: 0;
+
+}
+
+.right{
+    background-color:var(--primary);
+    color: var(--secondary);
+    height: 300vh;
+    width: 55%;
+    overflow-y: scroll;
+    right: 0;
+    position: absolute;
+    
+}

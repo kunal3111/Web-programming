@@ -1,0 +1,101 @@
+@media screen and (max-width: 500px) {
+   .left-content h1{
+    font-size: 2rem;
+   } 
+.navigation ul li a{
+    font-size: 1rem;
+}
+.left-content h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.right .right-content p,.left .left-content p{
+    font-size: 0.7rem;
+}
+}
+@media screen and (max-width: 450px) {
+   .left-content h1{
+    font-size: 1.8rem;
+   } 
+.navigation ul li a{
+    font-size: 0.8rem;
+}
+.left-content h2{
+    font-size: 1rem;
+    font-weight: 450;
+}
+.right .right-content p,.left .left-content p{
+    font-size: 0.65rem;
+}
+}
+@media screen and (max-width: 420px) {
+   .left-content h1{
+    font-size: 1.6rem;
+   } 
+.navigation ul li a{
+    font-size: 0.75rem;
+}
+.left-content h2{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.right .right-content p,.left .left-content p{
+    font-size: 0.6rem;
+}
+}
+@media screen and (max-width: 400px) {
+   .left-content h1{
+    font-size: 1.4rem;
+   } 
+.navigation ul li a{
+    font-size: 0.7rem;
+    
+}
+.nav ul li {
+    text-align: center;
+    align-content: center;
+}
+.left-content h2{
+    font-size: 0.6rem;
+    font-weight: 350;
+}
+.right .right-content p,.left .left-content p{
+    font-size: 0.45rem;
+}
+.left-content{
+    margin: 1rem 3rem;
+
+}
+.right-content{
+    padding: 2rem 1rem;
+
+}
+}
+@media screen and (max-width: 330px) {
+   .left-content h1{
+    font-size: 1.4rem;
+   } 
+.navigation ul li a{
+    font-size: 0.65rem;
+    
+}
+.nav ul li {
+    text-align: center;
+    align-content: center;
+}
+.left-content h2{
+    font-size: 0.6rem;
+    font-weight: 350;
+}
+.right .right-content p,.left .left-content p{
+    font-size: 0.45rem;
+}
+.left-content{
+    margin: 1rem 3rem;
+
+}
+.right-content{
+    padding: 2rem 1rem;
+
+}
+}
