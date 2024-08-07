@@ -1,0 +1,14 @@
+.left-content{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 5rem;
+
+}
+.right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3rem;
+    font-size: 0.95rem;
+}

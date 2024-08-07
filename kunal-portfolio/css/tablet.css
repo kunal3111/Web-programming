@@ -1,0 +1,78 @@
+@media screen and (max-width: 1000px) {
+body .lrsections{
+        display: flex;
+        flex-direction: column;
+    }
+.lrsections .left, .lrsections .right{
+    width: 100%;
+}
+.lrsections .left{
+    height: auto;
+    z-index: 1;
+    position: relative;
+    height: auto;
+
+}
+.icons{
+    display: none;  
+}
+.lrsections .right{
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px black;
+    position: sticky;
+    top: 1;
+    z-index:99;
+    margin-top: 1.4rem;
+    border-radius: 2rem;
+
+}
+
+.navigation ul li a {
+    text-shadow: 2px 2px 10px #006480;
+    
+    margin: 0 0.5rem;
+}
+.right-content{
+    padding-top:0 ;
+    
+}
+.right-content form input, #description{
+    margin: 0.3rem;
+padding: 0.5rem;
+width: 14rem;
+}
+.right-content form{
+    padding: 1.5rem;
+}
+}
+
+    
+@media screen and (max-width: 550px) {
+    .Projects .box{
+    display: flex;
+    flex-direction: column;
+    }
+    .right-content{
+        margin-top: 0;
+    }
+    .right-content form input, #description{
+        margin: 0.3rem;
+    padding: 0.5rem;
+    width: 14rem;
+    }
+    .right-content form{
+        padding: 1rem;
+    }
+}
+
+  
