@@ -1,0 +1,47 @@
+.left-content h1{
+    font-size: 3rem;
+}
+.left-content h2{
+  margin: 0rem 0rem 0rem 0rem;
+  font-weight: 500;
+}
+.left-content p{
+  margin: 1rem 0rem;
+  font-size: 0.95rem;
+
+}
+.navigation{
+  display: flex;
+  flex-direction: column;
+  height: 3rem;
+  width: 100%;
+}
+
+.navigation ul{
+  list-style: none;
+}
+.navigation ul li{
+padding: 0.4rem;
+}
+.navigation ul li a{
+text-decoration: none;  
+font-size: 1.2rem;
+color:var(--secondary);
+}
+.icons{
+  margin-left: 5rem;
+  position: fixed;  
+  bottom: 4.3rem;
+}
+.icons img{
+  font-size: 0.3rem;
+  opacity: 0.7;
+  padding: 0rem 0.5rem;
+
+}
+.navigation ul li a:hover{
+  color: #616574;
+}
+.navigation ul li a:Active{
+color: rgb(255, 0, 0);
+}
