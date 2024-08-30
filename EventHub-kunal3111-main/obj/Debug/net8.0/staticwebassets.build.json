@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "kiQIeDh6Z753MiH7YTRJuNLg2vo2BuCLxpS+84po6XA=",
+  "Source": "EventHub",
+  "BasePath": "_content/EventHub",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EventHub\\wwwroot",
+      "Source": "EventHub",
+      "ContentRoot": "D:\\Kunal-Arora\\EventHub-kunal3111-main\\wwwroot\\",
+      "BasePath": "_content/EventHub",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Kunal-Arora\\EventHub-kunal3111-main\\wwwroot\\app.css",
+      "SourceId": "EventHub",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Kunal-Arora\\EventHub-kunal3111-main\\wwwroot\\",
+      "BasePath": "_content/EventHub",
+      "RelativePath": "app.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "D:\\Kunal-Arora\\EventHub-kunal3111-main\\wwwroot\\favicon.png",
+      "SourceId": "EventHub",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Kunal-Arora\\EventHub-kunal3111-main\\wwwroot\\",
+      "BasePath": "_content/EventHub",
+      "RelativePath": "favicon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.png"
+    }
+  ]
+}

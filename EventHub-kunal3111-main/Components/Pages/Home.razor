@@ -1,0 +1,61 @@
+﻿@page "/"
+@using EventHub.Models
+@rendermode InteractiveServer
+@using Data.Services
+@inject IConfiguration Config
+@inject NavigationManager Navigation
+
+@code {
+    private List<Event> events = new();
+    private DataService? ds;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        ds = new DataService(Config.GetConnectionString("default")!);
+
+
+        events = await GetEventsAsync();
+    }
+
+    private async Task<List<Event>> GetEventsAsync()
+    {
+        if (ds == null)
+        {
+            throw new NullReferenceException("DataService is not initialized.");
+        }
+
+        var sql = "SELECT * FROM Event";
+        return await ds.LoadData<Event, dynamic>(sql, new { });
+    }
+
+    private async Task DeleteEvent(Event eventToDelete)
+    {
+        if (ds == null)
+        {
+            throw new NullReferenceException("DataService is not initialized.");
+        }
+
+
+        var sql = "DELETE FROM Event WHERE Id = @Id";
+        await ds.SaveData(sql, new { Id = eventToDelete.Id });
+
+
+        events.Remove(eventToDelete);
+    }
+
+    public void AddEvent()
+    {
+        Navigation.NavigateTo("/addnewevent");
+    }
+}
+<PageTitle>EventHub | Events</PageTitle>
+
+<div class="column">
+    @foreach (var eventItem in events)
+    {
+        <div class="col-md-10 mb-7 flex-dire">
+            <EventCard Event="eventItem" OnDelete="DeleteEvent" />
+        </div>
+    }
+</div>

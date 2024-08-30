@@ -1,0 +1,87 @@
+﻿@page "/new"
+@using Dapper
+@rendermode InteractiveServer
+@using MySql.Data.MySqlClient
+@inject IConfiguration Config
+@inject NavigationManager Navigation
+@using System.ComponentModel.DataAnnotations
+
+
+
+@code {
+    private EventModel newEvent = new();
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            var connectionString = Config.GetConnectionString("default");
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                string sql = "INSERT INTO Event (Title, Date, Email) VALUES (@Title, @Date, @Email)";
+                var parameters = new 
+                {
+                    Title = newEvent.Title,
+                    Date = newEvent.Date,
+                    Email = newEvent.Email
+                };
+
+                await connection.ExecuteAsync(sql, parameters);
+            }
+
+            Navigation.NavigateTo("/");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while adding the event: {ex.Message}");
+        }
+    }
+
+    public class EventModel
+    {
+        [Required(ErrorMessage = "Title is required.")]
+        public string Title { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Date is required.")]
+        [DataType(DataType.Date)]
+        public DateTime Date { get; set; } = DateTime.Now;
+
+        [Required(ErrorMessage = "please put the email.")]
+        [EmailAddress(ErrorMessage = "Email adress is Invalid.")]
+        public string Email { get; set; } = string.Empty;
+    }
+}
+
+<PageTitle>EventHub = New Event</PageTitle>
+
+<div class="row">
+    <div class="row">
+        <EditForm Model="newEvent" OnValidSubmit="HandleValidSubmit" class="p-5 bg-light border border-1">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <h2 class="fw-normal text-center mb-3 flex-column">New Event</h2>
+            <div class="row">
+                <div class="col-10 col-md-5 mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <InputText id="title" placeholder="Event Title" class="form-control mb-1" @bind-Value="newEvent.Title" />
+                    <ValidationMessage For="@(() => newEvent.Title)" />
+                </div>
+                <div class="col-12 col-md-5 mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <InputDate id="date" class="form-control mb-1" @bind-Value="newEvent.Date" />
+                    <ValidationMessage For="@(() => newEvent.Date)" />
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <InputText id="email" placeholder="john.smith@email.com" class="form-control mb-1" @bind-Value="newEvent.Email" />
+                    <ValidationMessage For="@(() => newEvent.Email)" />
+                </div>
+            </div>
+
+            <button class="btn btn-primary me-3" type="submit">Add More</button>
+            <a href="/" class="btn btn-secondary">Cancel</a>
+        </EditForm>
+    </div>
+</div>
